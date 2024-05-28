@@ -1,0 +1,53 @@
+Que-2) what is javascrpit output method?
+=> Output method used for displaying information to users. 
+
+Here, Output Method is :
+
+ 1. console.log():
+   - This method is used to print messages to the console, typically used for debugging or logging purposes.
+   - syntax: console.lo("Hello World");
+
+ 2. document.write():
+   - This method writes directly to the HTML document.
+   - This method should be used for testing.
+   - syntax: document.write("Hello World");
+
+ 3. alert():
+   - This method displays a dialog box with a specified message and an OK button.
+   - It's often used for simple notifications or alerts. 
+   - syntax: alert("Hello World");
+
+ 4. innerHTML:
+   - This property can be used to get or set the HTML content of an element.
+   - It's commonly used to dynamically update content on a webpage.
+   - syntax: document.getElemnetById("output").innerHTML = "Hello World";
+
+
+Que-3) How to used JavaScript Output method?
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Output</title>
+</head>
+<body>
+
+ <div id="output"></div>
+
+  <script>
+    console.log("Hello, world!"); // result: Hello, world!
+
+    document.write("<h1>Hello, world!</h1>"); // result: Hello, world!
+
+    alert("Hello, world!"); // print in popup to result :  Hello, world! 
+
+    document.getElementById("output").innerHTML = "Hello, world!"; // result: Hello, world! 
+  </script>
+
+</body>
+</html>
+
+
+

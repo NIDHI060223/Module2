@@ -1,0 +1,60 @@
+Que-1: Calculate subtotal price of quantity in JavaScript? 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="subTotal.css">
+</head>
+<body>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Product Info</th>
+                    <th>Quantity</th>
+                    <th>Price(per unit)</th>
+                    <th>Price(subtotal)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://www.boat-lifestyle.com/cdn/shop/products/main_black_71281c3f-ea28-4316-8a1f-544820908c6c_600x.png?v=1708416957">
+                        <p>Water Bottle</p>
+                    </td>
+                    <td><input type="text" class="quantity" value="1"/></td>
+                    <td class="price">$2000</td>
+                    <td class="subTotal">$2000</td>
+                    <td><button onclick="removeRow(this)">Remove</button></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/aluminum-water-bottle-sports-636Ow96-600.jpg">
+                        <p>Water Bottle</p>
+                    </td>
+                    <td><input type="text" class="quantity" value="1"/></td>
+                    <td class="price">$800</td>
+                    <td class="subTotal">$800</td>
+                    <td><button onclick="removeRow(this)">Remove</button></td>
+                </tr>
+            
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="total">$2800</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+   <script src="subTotal.js"></script>
+</body>
+</html>

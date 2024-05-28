@@ -1,0 +1,23 @@
+.quantity{
+    width: 80%;
+    margin-left:10px;
+}
+img{
+    width:100px;
+    height:100px;
+}
+p{
+    text-align: center;
+}
+.price{
+    text-align: center;
+}
+.subTotal{
+    text-align: center;
+}
+button{
+    width: 90px;
+}
+.total{
+    text-align: center;
+}

@@ -1,0 +1,161 @@
+Que-4) How to used JavaScript Events to do all examples?
+=>
+- type of events:
+
+1. Window Events:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Example</title>
+</head>
+<body>
+
+<div class="scrollable">
+    <div class="content">Scroll inside this element.</div>
+</div>
+
+<script>
+    window.addEventListener('load', function() {
+        console.log('Page has fully loaded.');
+    });
+
+    window.addEventListener('unload', function() {
+        console.log('Page is being unloaded.');
+    });
+
+    window.addEventListener('scroll', function() {
+        console.log('Page is being scrolled.');
+    });
+
+    window.addEventListener('resize', function() {
+        console.log('Window has been resized.');
+    });
+
+    let scrollableElement = document.querySelector('.scrollable');
+    scrollableElement.addEventListener('scroll', function() {
+        console.log('Scrollable element is being scrolled.');
+    });
+</script>
+</body>
+</html>
+
+2. Mouse Events:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Example</title>
+</head>
+<body>
+    <div id="myDiv">Hover me</div>
+    <p id="eventOutput"></p>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const myDiv = document.getElementById('myDiv');
+    const eventOutput = document.getElementById('eventOutput');
+
+    function logEvent(event) {
+        eventOutput.textContent = `Event: ${event.type}`;
+    }
+
+    myDiv.addEventListener('click', logEvent);
+    myDiv.addEventListener('dblclick', logEvent);
+    myDiv.addEventListener('mousedown', logEvent);
+    myDiv.addEventListener('mouseup', logEvent);
+    myDiv.addEventListener('mousemove', logEvent);
+    myDiv.addEventListener('mouseover', logEvent);
+    myDiv.addEventListener('mouseout', logEvent);
+    myDiv.addEventListener('mouseenter', logEvent);
+    myDiv.addEventListener('mouseleave', logEvent);
+    });
+    </script>
+</body>
+</html>
+
+3. keyboard Events:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Events Example</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            console.log(`Keydown: ${event.key} (${event.code})`);
+        });
+
+        document.addEventListener('keyup', function(event) {
+            console.log(`Keyup: ${event.key} (${event.code})`);
+        });
+
+        document.addEventListener('keypress', function(event) {
+            console.log(`Keypress: ${event.key} (${event.code})`);
+        });
+    </script>
+</body>
+</html>
+
+4. Form Events:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+    <style>
+        .focused {
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <form id="exampleForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Selecting the form and input elements
+        const form = document.getElementById('exampleForm');
+        const nameInput = document.getElementById('name');
+        const ageInput = document.getElementById('age');
+
+        // Submit event
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Form submitted!');
+            console.log('Form submitted');
+        });
+
+        // Focus event
+        nameInput.addEventListener('focus', function() {
+            nameInput.classList.add('focused');
+            console.log('Name input focused');
+        });
+
+        // Blur event
+        nameInput.addEventListener('blur', function() {
+            nameInput.classList.remove('focused');
+            console.log('Name input blurred');
+        });
+
+        // Change event
+        ageInput.addEventListener('change', function() {
+            alert('Age changed to: ' + ageInput.value);
+            console.log('Age input changed to: ' + ageInput.value);
+        });
+    </script>
+</body>
+</html>
