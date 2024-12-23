@@ -19,12 +19,12 @@ providing examples and practical use cases.
   - Recalculates the total price when a row is removed.
 
 ### Code Files:
-- `subtotal-calculation.html` (Main HTML file)
+- `subtotal.html` (Main HTML file)
 - `subtotal.js` (JavaScript logic)
 - `subtotal.css` (Styling)
 
 ### Steps to Use:
-1. Open `subtotal-calculation.html` in a browser.
+1. Open `subtotal.html` in a browser.
 2. Adjust the quantity values in the table and observe the subtotal updates.
 3. Click "Remove" to delete a row and recalculate the total price.
 
